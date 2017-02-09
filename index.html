@@ -1,40 +1,66 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+  Strata by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
- <head>
-  <meta charset="utf-8" />
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <head>
+    <title>YouTube You</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body id="top">
+      <header id="header">
+        <div class="inner">
+          <h1 style="margin-top:20px;"><strong>YouTube You</strong>, a video <br />
+          experience you can choose<br /> <br />
+          <h4>I'm Feeling</h4>
+          <select id="feelingForm" style="color:black">
+            <option value="sad">Sad</option>
+            <option value="happy">Happy</option>
+            <option value="bored">Bored</option>
+          </select>
+    <p>What key word would you like to use in the search?</p>
+    <input id="queryWord" type="text" placeholder="Key Word" style="color:black" />
+    <br />
+    <input type="submit" id="feeling" style="color:black"/>
+        </div>
+      </header>
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+      <div id="main">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+          <section id="two">
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+            <h2>Videos Meant Just for You</h2>
+            <div class="row" id="embedVideo"></div>
+            <div class="row">
+              <article class="6u 12u$(xsmall) work-item">
+                <a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+                <h3>Magna sed consequat tempus</h3>
+                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+              </article>
+              
+            </div>
+          </section>
+      </div>
 
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <footer id="footer">
+        <div class="inner">
+          
+          <ul class="copyright">
+            <li>&copy; Kesler&Hansen</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </footer>
 
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.poptrox.min.js"></script>
+      <script src="assets/js/skel.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+      <script src="index.js" type="text/javascript"></script>
 
-
-  <title>Creative 2</title>
- </head>
-
- <body>
-<h2>I'm feeling:</h2>
-  <select id="feelingForm">
-    <option value="sad">Sad</option>
-    <option value="happy">Happy</option>
-    <option value="bored">Bored</option>
-  </select>
-  <br><br>
-  <p>What key word would you like to use in the search?</p>
-  <input id="queryWord" type="text" placeholder="Key Word">
-  <input type="submit" id="feeling">
-</form>
-
-<div id="embedVideo"></div>
-
-
-	 	<script src="index.js" type="text/javascript"></script>
- </body>
+  </body>
+</html>
