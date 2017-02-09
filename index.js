@@ -5,11 +5,7 @@ $("#search").click(function(e){
   var apiKey = "AIzaSyCp8h92fiNWvPHlnG3u7jHsghZsR9ukLu4"
   var query = $("#feelingForm :selected").val();
 
-<<<<<<< HEAD
    var myurl= "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q="+query+"&key="+ apiKey;
-=======
-   var myurl= "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=40&q="+query+"&key="+ apiKey;
->>>>>>> 0db6f3d28bc7ee45a618800cb551a0e5edf53256
 
    everything = "<ul>";
 
@@ -44,11 +40,7 @@ $("#learn").click(function(e){
   var apiKey = "AIzaSyCp8h92fiNWvPHlnG3u7jHsghZsR9ukLu4"
   var query = "how to" + $("#learnForm :selected").val();
 
-<<<<<<< HEAD
    var myurl= "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q="+query+"&key="+ apiKey;
-=======
-   var myurl= "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q="+query+"&key="+ apiKey;
->>>>>>> 0db6f3d28bc7ee45a618800cb551a0e5edf53256
 
    everything = "<ul>";
 
