@@ -13,19 +13,43 @@
   </head>
   <body id="top">
       <header id="header">
-        <div class="inner">
-          <h1 style="margin-top:20px;"><strong>YouTube You</strong>, a video <br />
-          experience you can choose<br /> <br />
+        <div style="text-align: center;" class="inner">
+          <h1 style="text-align: right;" ><strong>YouTube You</strong>, a video <br />
+          experience <em>you</em> can choose.<br /> <br />
           <h4>I'm Feeling</h4>
           <select id="feelingForm" style="color:black">
-            <option value="sad">Sad</option>
-            <option value="happy">Happy</option>
-            <option value="bored">Bored</option>
+            <option value="" >Random</option>
+            <option value="depressing classical music"><!-- <img src="images/Cold_Sweat.png"/> -->Sad</option>
+            <option value="laughing babies">Happy</option>
+            <option value="cat videos">Bored</option>
+            <option value="punk rock">Punky</option>
+            <option value="calm music">Stressed</option>
+            <option value="full movie">like I want to watch a crappy movie.</option>
           </select>
-    <p>What key word would you like to use in the search?</p>
+          <br />
+
+          <input type="submit" id="search" style="color:black"/>
+          <br />
+          <h1 >OR</h1>
+
+          <h4>I'd like to learn how to...</h4>
+          <select id="learnForm" style="color:black">
+            <option value="DIY" >.. do something random!</option>
+            <option value="sow a button">...sew a Button!</option>
+            <option value="change a tire">...change a Car tire</option>
+            <option value="make a website">...make my own wesite</option>
+            <option value="do calculus ">...do math!</option>
+            <option value="pet a cat">...pet a Cat!</option>
+             <option value="make pizza">...make pizza!</option>
+             <option value="make money">...make money!</option>
+            <option value="make a website">...make my own wesite!(I can do better than this!)</option>
+          </select><br />
+          <input type="submit" id="learn" style="color:black"/>
+
+    <!-- <p>What key word would you like to use in the search?</p>
     <input id="queryWord" type="text" placeholder="Key Word" style="color:black" />
-    <br />
-    <input type="submit" id="feeling" style="color:black"/>
+    <br /> -->
+    
         </div>
       </header>
 
@@ -33,16 +57,14 @@
 
           <section id="two">
 
-            <h2>Videos Meant Just for You</h2>
+            <h2>Videos Meant Just for You:</h2>
             <div class="row" id="embedVideo"></div>
-            <div class="row">
+           <!--  <div class="row">
               <article class="6u 12u$(xsmall) work-item">
                 <a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-                <h3>Magna sed consequat tempus</h3>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
               </article>
-              
-            </div>
+               
+            </div> -->
           </section>
       </div>
 
