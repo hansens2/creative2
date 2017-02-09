@@ -1,26 +1,26 @@
-$("#feeling").click(function(e){
+$("#search").click(function(e){
   e.preventDefault();
   var everything = "";
-   var apiKey = "AIzaSyCp8h92fiNWvPHlnG3u7jHsghZsR9ukLu4"
-   var topic = $("#feelingForm :selected").val();
-   var query = $("#queryWord").val();
+  //var query = "";
+  var apiKey = "AIzaSyCp8h92fiNWvPHlnG3u7jHsghZsR9ukLu4"
+  var query = $("#feelingForm :selected").val();
 
-   var myurl= "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q="+query+"&key="+ apiKey;
+   var myurl= "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=100&q="+query+"&key="+ apiKey;
 
    everything = "<ul>";
 
    $.getJSON(myurl, function(data){ 
     var items = data.items;
+    items = shuffle(items);
+    sliceditems = items.slice(0, 10);
 
-    $.each(items, function (index, item) {
+
+    $.each(sliceditems, function (index, item) {
         everything += "<li>";
-         console.log( item.id.videoId);
+        console.log( item.id.videoId);
         var videoID = item.id.videoId;
         var title = item.snippet.title;
         var thumbnailUrl = item.snippet.thumbnails.medium.url;
-
-        // var link = item.link;
-        // var isAnswered = item.is_answered;
 
         everything += "<h3>"+title+"</h3><br/>";
         everything += '<iframe width="560" height="315" src="https://www.youtube.com/embed/'+videoID+'" frameborder="0" allowfullscreen></iframe>';
@@ -32,3 +32,58 @@ $("#feeling").click(function(e){
 
 })
  });
+
+$("#learn").click(function(e){
+  e.preventDefault();
+  var everything = "";
+  //var query = "";
+  var apiKey = "AIzaSyCp8h92fiNWvPHlnG3u7jHsghZsR9ukLu4"
+  var query = "how to" + $("#learnForm :selected").val();
+
+   var myurl= "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=100&q="+query+"&key="+ apiKey;
+
+   everything = "<ul>";
+
+   $.getJSON(myurl, function(data){ 
+    var items = data.items;
+    items = shuffle(items);
+    sliceditems = items.slice(0, 10);
+
+
+    $.each(sliceditems, function (index, item) {
+        everything += "<li>";
+         console.log( item.id.videoId);
+        var videoID = item.id.videoId;
+        var title = item.snippet.title;
+        var thumbnailUrl = item.snippet.thumbnails.medium.url;
+
+        everything += "<h3>"+title+"</h3><br/>";
+        everything += '<iframe width="560" height="315" src="https://www.youtube.com/embed/'+videoID+'" frameborder="0" allowfullscreen></iframe>';
+         everything += "</li>";
+         everything += "<hr/>";
+      });
+    everything +="</ul>"
+    $("#embedVideo").html(everything);
+
+})
+ });
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
